@@ -11,5 +11,8 @@ interface JSONPlaceholder{
 
     @GET("/posts/{id}/comments")
     suspend fun obtener_comentarios_de_publicacion(@Path("id") id: Int): List<Comentario>
+
+    @GET("/users")
+    suspend fun obtener_usuarios(): List<com.example.hilt_y_retrofit.modelos.Usuario>
 }
 
